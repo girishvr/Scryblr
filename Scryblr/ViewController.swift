@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var renderView: RenderView!
     
-    @IBOutlet var letterLabel: UILabel!
+    @IBOutlet var textView: UITextView!
     
     var timer: Timer!
     
@@ -57,10 +57,12 @@ class ViewController: UIViewController {
         
     }
     
+    //View beautify
+    
+    
     //takes the coordinates of the first touch
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         rawPoints = []
-//        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
 
         let touch = touches.first
         let location = touch!.location(in: view)
@@ -90,7 +92,8 @@ class ViewController: UIViewController {
         
         if gesture != nil {
             let letters = gesture!.datas as? String
-            letterLabel.text  = letterLabel.text! + letters!
+            updateText(textView.text! + letters!)
+
         }
         else
         {
@@ -99,13 +102,43 @@ class ViewController: UIViewController {
 
     }
     
+    //XXX: - draw F X E Q
+    
     func update(){
         timer.invalidate()
         rawPoints = []
     }
     
+    
+    func updateText(_ subStr: String){
+        textView.text  = subStr
+        let range = NSMakeRange(textView.text.lengthOfBytes(using: String.Encoding.utf8), 0);
+        textView.scrollRangeToVisible(range);
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    
+    @IBAction func carriegeReturn(){
+        var subString: String  = textView.text!
+        if subString.characters.count > 0{
+            subString.append("\n")
+            updateText(subString)
+        }
+
+    }
+    
+    @IBAction func backSpace(){
+        var subString: String  = textView.text!
+        if subString.characters.count > 0{
+            subString.remove(at: subString.index(before: subString.endIndex))
+            updateText(subString)
+        }
+    }
+    
+    
 }
 

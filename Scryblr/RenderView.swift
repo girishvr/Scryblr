@@ -23,8 +23,8 @@ class RenderView:UIView {
     
     override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
-        //context!.clear(self.bounds)
-        context!.setLineWidth(10.0)
+        context!.clear(self.bounds)
+        context!.setLineWidth(4.0)
         
         
         if pointsToDraw.count > 4 {
@@ -39,6 +39,7 @@ class RenderView:UIView {
         }
         
         // Draw
+        context!.setStrokeColor(UIColor.white.cgColor)
         context!.strokePath();
     }
 }

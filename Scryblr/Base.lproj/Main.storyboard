@@ -25,22 +25,79 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x1a-0a-5tf" customClass="RenderView" customModule="Scryblr" customModuleProvider="target">
                                 <rect key="frame" x="21" y="25" width="333" height="637"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rh3-pS-gWf">
-                                        <rect key="frame" x="10" y="10" width="313" height="21"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="white" text="Hello!" translatesAutoresizingMaskIntoConstraints="NO" id="5lK-bl-hIl">
+                                        <rect key="frame" x="8" y="8" width="317" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="ilJ-oo-oEZ"/>
+                                            <constraint firstAttribute="height" constant="60" id="4ct-EK-u2r"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJh-eN-sry">
+                                        <rect key="frame" x="0.0" y="607" width="50" height="30"/>
+                                        <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="47q-NP-YhE"/>
+                                            <constraint firstAttribute="height" constant="30" id="NOo-2c-BYg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="↩︎">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="carriegeReturn" destination="BYZ-38-t0r" eventType="touchUpInside" id="E3U-OK-vva"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ky-fE-3lF">
+                                        <rect key="frame" x="283" y="607" width="50" height="30"/>
+                                        <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Y7m-v7-gTE"/>
+                                            <constraint firstAttribute="height" constant="30" id="rGU-xc-Jfn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="⇤">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="backSpace" destination="BYZ-38-t0r" eventType="touchDown" id="lwi-6Y-mLD"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.88494885916086397" blue="0.54092219788730012" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.88494885919999999" blue="0.54092219789999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Rh3-pS-gWf" firstAttribute="top" secondItem="x1a-0a-5tf" secondAttribute="top" constant="10" id="KcM-Ay-T3B"/>
-                                    <constraint firstItem="Rh3-pS-gWf" firstAttribute="leading" secondItem="x1a-0a-5tf" secondAttribute="leading" constant="10" id="RCZ-JN-ecr"/>
-                                    <constraint firstAttribute="trailing" secondItem="Rh3-pS-gWf" secondAttribute="trailing" constant="10" id="wMe-Ei-J1H"/>
+                                    <constraint firstItem="5lK-bl-hIl" firstAttribute="top" secondItem="x1a-0a-5tf" secondAttribute="top" constant="8" id="DVC-oM-Nag"/>
+                                    <constraint firstAttribute="bottom" secondItem="FJh-eN-sry" secondAttribute="bottom" id="HJO-3M-6e6"/>
+                                    <constraint firstAttribute="bottom" secondItem="5ky-fE-3lF" secondAttribute="bottom" id="TfE-Th-iAv"/>
+                                    <constraint firstAttribute="trailing" secondItem="5lK-bl-hIl" secondAttribute="trailing" constant="8" id="acg-UR-fb6"/>
+                                    <constraint firstItem="FJh-eN-sry" firstAttribute="leading" secondItem="x1a-0a-5tf" secondAttribute="leading" id="bzq-C8-Y0C"/>
+                                    <constraint firstItem="5lK-bl-hIl" firstAttribute="leading" secondItem="x1a-0a-5tf" secondAttribute="leading" constant="8" id="g6R-Hy-Sny"/>
+                                    <constraint firstAttribute="trailing" secondItem="5ky-fE-3lF" secondAttribute="trailing" id="xIm-8M-lIG"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.90247225760000005" green="0.2957668712" blue="0.27315352430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -52,8 +109,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="letterLabel" destination="Rh3-pS-gWf" id="UiB-IC-dsQ"/>
                         <outlet property="renderView" destination="x1a-0a-5tf" id="KwP-BT-lQs"/>
+                        <outlet property="textView" destination="5lK-bl-hIl" id="Ir8-N4-FaL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
