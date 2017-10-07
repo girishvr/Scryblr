@@ -79,7 +79,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="backSpace" destination="BYZ-38-t0r" eventType="touchDown" id="lwi-6Y-mLD"/>
+                                            <action selector="backSpace" destination="BYZ-38-t0r" eventType="touchDown" id="l5l-QP-MdX"/>
                                         </connections>
                                     </button>
                                 </subviews>

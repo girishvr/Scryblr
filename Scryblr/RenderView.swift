@@ -39,7 +39,8 @@ class RenderView:UIView {
         }
         
         // Draw
-        context!.setStrokeColor(UIColor.white.cgColor)
+        let strokeColor: UIColor = UIColor(colorLiteralRed: 200.0, green: 200.0, blue: 200.0, alpha: 0.5)
+        context!.setStrokeColor(strokeColor.cgColor)
         context!.strokePath();
     }
 }
